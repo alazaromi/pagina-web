@@ -1,0 +1,412 @@
+/* ------------------------------- 
+ 1. Base, texto, titulos, colores...
+ ------------------------------- */
+html { scroll-padding-top: 6rem; }
+
+body {
+  margin: 0;
+  font-family: Verdana, Tahoma, sans-serif;
+  line-height: 1.7; color: #1a1033;
+  background-color: #2d1e5f; 
+}
+
+
+h1, h2, h3, h4 {
+  font-family: "Courier New", Courier, monospace;
+  line-height: 1.25;
+}
+
+h1 { 
+  margin: 0 0 0.75rem;
+  font-family: "Arial Black", Impact, sans-serif;
+  font-size: 2.5rem;
+  line-height: 1.1;
+}
+
+h3 { 
+  margin: 0 0 0.6rem; 
+  font-size: 1.2rem; 
+}
+
+h4 { 
+  margin: 0 0 0.6rem;
+  font-size: 1.05rem;
+}
+
+p { margin: 0 0 1rem;}
+
+figure { margin: 0; }
+
+img { 
+  display: block;
+  max-width: 100%;
+}
+
+strong { 
+  padding: 0 0.25rem;
+  background-color: #ffe45c; 
+  color: #1a1033; 
+}
+
+em { color: #5b21b6;}
+
+a { color: #1d4ed8; }
+
+a:hover { background-color: #ffe45c; }
+
+a:focus-visible { 
+  outline: 4px solid #1d4ed8;
+  outline-offset: 3px; 
+}
+
+.rosa { background-color: #ff4d8d; }
+.azul { background-color: #3cd6eb; }
+.amarillo { background-color: #ffe45c; }
+.verde { background-color: #7ae7c7; }
+.morado { background-color: #b79cff; }
+
+/* Funcion para que los que naveguen con lectores de pantalla puedan ir directamente al contenido */
+.saltar { 
+  position: absolute; 
+  top: -4rem; 
+  left: 1rem; 
+  z-index: 20; 
+  padding: 0.5rem 1rem; 
+  background-color: #ffe45c; 
+  color: #1a1033; 
+  border: 3px solid #1a1033; 
+  border-radius: 12px; 
+}
+
+.saltar:focus-visible { top: 1rem; }
+
+
+
+/* ------------------------------- 
+ 2. Introduccion/inicio
+------------------------------- */
+header { padding: 2.5rem 1rem 2rem; }
+
+.portada { position: relative; 
+  display: flex; 
+  flex-wrap: wrap; 
+  align-items: center; 
+  gap: 1.5rem; 
+  box-sizing: border-box; 
+  max-width: 56rem; 
+  margin: 0 auto; 
+  padding: 2rem 1.5rem 1.5rem; 
+  background-color: #ffe45c; 
+  border: 4px solid #1a1033; 
+  border-radius: 16px; 
+  box-shadow: 10px 10px 0 #ff4d8d; 
+}
+
+.pegatina { 
+  position: absolute; 
+  top: -1.2rem; 
+  right: 1.5rem; 
+  padding: 0.2rem 0.9rem; 
+  background-color: #ff4d8d; 
+  font-weight: bold; 
+  border: 3px solid #1a1033; 
+  border-radius: 999px; 
+  transform: rotate(4deg); 
+}
+
+.titular { flex: 1 1 20rem; }
+
+.subtitulo { 
+  font-size: 1.2rem; 
+  font-style: italic;
+}
+
+.foto-principal { 
+  position: relative; 
+  flex: 1 1 18rem; 
+  box-sizing: border-box; 
+  background-color: #1a1033; 
+  border: 4px solid #1a1033; 
+  border-radius: 16px; 
+}
+
+.foto-principal img {
+  width: 100%; 
+  height: 17rem; 
+  object-fit: contain; 
+  border-radius: 12px; 
+}
+
+.foto-principal figcaption { 
+  position: absolute; 
+  left: 0; right: 0; bottom: 0; padding: 0.4rem 0.8rem; 
+  background-color: rgba(26, 16, 51, 0.85);
+  color: #ffffff; font-weight: bold; text-align: center; border-radius: 0 0 12px 12px; 
+}
+
+
+/* ------------------------------- 
+  3. MENU STICKY 
+ ------------------------------- */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  padding: 0 1rem;
+  background-color: #1a1033;
+  border-bottom: 5px solid #ff4d8d;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem;
+  margin: 0;
+  padding: 0.6rem 0;
+  list-style: none;
+}
+
+nav a {
+  display: inline-block;
+  padding: 0.3rem 1rem;
+  color: #1a1033;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+  border: 3px solid #fff8ec;
+  border-radius: 999px;
+  text-decoration: none;
+}
+
+nav a:hover { background-color: #ffffff; }
+nav a:focus-visible { outline: 4px solid #ffffff; outline-offset: 3px; }
+
+/* ------------------------------- 
+ 4. APARTADOS
+ ------------------------------- */
+
+main {
+  max-width: 56rem;
+  margin: 0 auto;
+  padding: 2rem 1rem 0;
+}
+
+section {
+  margin-bottom: 3rem;
+  background-color: #fff8ec;
+  border: 4px solid #1a1033;
+  border-radius: 16px;
+}
+
+#por-que { box-shadow: 10px 10px 0 #ff4d8d; }
+#usos { box-shadow: 10px 10px 0 #3cd6eb; }
+#fotos { box-shadow: 10px 10px 0 #ffe45c; }
+#evolucion { box-shadow: 10px 10px 0 #7ae7c7; }
+#mas-info { box-shadow: 10px 10px 0 #b79cff; }
+
+section h2 {
+  margin: 0;
+  padding: 0.6rem 1.25rem;
+  font-size: 1.3rem;
+  border-bottom: 4px solid #1a1033;
+  border-radius: 12px 12px 0 0;
+}
+
+.cuerpo { padding: 1.5rem 1.5rem 0.5rem; }
+
+/* ------------------------------- 
+  5. Tarjetas 
+ ------------------------------- */ 
+
+.paneles, .beneficios, .enlaces, .galeria {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 0 0 1rem;
+}
+
+.usos-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin: 0 0 1rem;
+}
+
+.enlaces { padding: 0; list-style: none; }
+#mas-info .enlaces .tarjeta { text-align: center; }
+
+.tarjeta {
+  flex: 1 1 14rem;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 1rem 1.25rem 0.25rem;
+  background-color: #ffffff;
+  border: 3px solid #1a1033;
+  border-radius: 12px;
+  box-shadow: 5px 5px 0 #1a1033;
+}
+
+.tarjeta h3, .tarjeta h4 {
+  display: inline-block;
+  padding: 0.1rem 0.7rem;
+  border: 3px solid #1a1033;
+  border-radius: 12px;
+}
+
+.boton {
+  display: inline-block;
+  margin: 0 0 0.75rem;
+  padding: 0.4rem 1rem;
+  background-color: #1a1033;
+  color: #ffffff;
+  font-weight: bold;
+  border: 3px solid #1a1033;
+  border-radius: 999px;
+  box-shadow: 3px 3px 0 #b79cff;
+  text-decoration: none;
+}
+
+.boton:hover { background-color: #5b21b6; color: #ffffff; }
+
+/* ------------------------------- 
+  6. Fotos 
+------------------------------- */
+
+.galeria { gap: 2rem 1.5rem; padding-top: 0.75rem; }
+
+.galeria figure {
+  position: relative;
+  flex: 1 1 18rem;
+  box-sizing: border-box;
+  padding: 0.75rem 0.75rem 0.5rem;
+  background-color: #ffffff;
+  border: 3px solid #1a1033;
+  box-shadow: 5px 5px 0 #1a1033;
+}
+
+.galeria figure:nth-child(odd) { transform: rotate(-1.5deg); }
+.galeria figure:nth-child(even) { transform: rotate(1.5deg); }
+
+.galeria img {
+  width: 100%;
+  height: 14rem;
+  object-fit: contain;
+  background-color: #e8e1ff;
+}
+
+.galeria figcaption {
+  padding-top: 0.5rem;
+  font-family: "Courier New", Courier, monospace;
+  text-align: center;
+}
+
+.cinta {
+  position: absolute;
+  top: -0.9rem;
+  left: 0;
+  right: 0;
+  width: 5rem;
+  height: 1.6rem;
+  margin: 0 auto;
+  background-color: rgba(255, 77, 141, 0.75);
+  transform: rotate(-3deg);
+}
+
+/* ------------------------------- 
+ 7. Apartado de la evolucion    
+ ------------------------------- */
+
+.linea {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin: 0 0 1rem;
+  padding: 0 0 0 2rem;
+  list-style: none;
+  border-left: 6px solid #1a1033;
+}
+
+.linea li {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem 1.25rem 0.25rem;
+  background-color: #ffffff;
+  border: 3px solid #1a1033;
+  border-radius: 12px;
+  box-shadow: 5px 5px 0 #1a1033;
+}
+
+.linea .hoy { background-color: #fff3a8; box-shadow: 5px 5px 0 #ff4d8d; }
+
+.punto {
+  position: absolute;
+  top: 1.25rem;
+  left: -3.2rem;
+  width: 1.2rem;
+  height: 1.2rem;
+  background-color: #7ae7c7;
+  border: 4px solid #1a1033;
+  border-radius: 999px;
+}
+
+.hoy .punto { background-color: #ff4d8d; }
+.texto { flex: 1 1 16rem; }
+
+.fecha {
+  display: inline-block;
+  margin: 0 0 0.5rem;
+  padding: 0.1rem 0.7rem;
+  background-color: #7ae7c7;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+  border: 3px solid #1a1033;
+  border-radius: 999px;
+}
+
+.hoy .fecha { background-color: #ff4d8d; }
+
+.mini {
+  width: 11rem;
+  height: 8rem;
+  margin: 0 0 1rem;
+  object-fit: contain;
+  background-color: #e8e1ff;
+  border: 3px solid #1a1033;
+  border-radius: 8px;
+}
+
+/* ------------------------------- 
+  8. footer
+ ------------------------------- */
+footer {
+  padding: 1.5rem 1rem 0.5rem;
+  background-color: #1a1033;
+  color: #fff8ec;
+  text-align: center;
+}
+
+footer a { color: #ffe45c; }
+
+footer a:hover {
+  background-color: #ffe45c;
+  color: #1a1033;
+}
+
+footer a:focus-visible {
+  outline: 4px solid #ffffff;
+  outline-offset: 3px;
+}
+
+/* ------------------------------- 
+ 9. PARA PANTALLAS ESTRECHAS 
+ ------------------------------- */
+
+@media (max-width: 36rem) {
+  nav { position: static; }
+  html { scroll-padding-top: 0; }
+  h1 { font-size: 2rem; }
+  .usos-grid { grid-template-columns: 1fr; }
+}
